@@ -1,0 +1,145 @@
+<!-- Taylor Simpson - Ada App Hacks 2020 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Support Ticker Status</title>
+  </head>
+
+  <body>
+    <div id="widget-container" class="widget-container">
+
+      <!-- Loading... is replaced by relevant ticket info -->
+      <div class="top-bar">
+        <div class="title">
+          <h2 class="title">Ticket Status</h2>
+          <p id="ticket-number" class="ticket-number">Loading...</p>
+        </div>
+        <div class="status">
+          <p id="status">Loading...</p>
+        </div>
+      </div>
+
+      <p id="description" class="description">Loading...</p>
+
+      <!-- Collapsable buttons (accordion) -->
+      <button class="btn">
+        <div class="firstTwo">
+          <!-- grey-dot is overwritten by black-dot if dotOpened is active (status >= 1)-->
+          <div class="black-dot" id="dotOpened">
+            <div class="grey-dot">
+
+            </div>
+          </div>
+          <div class="text">
+            <p class="stage">Opened</p>
+            <p class="time" id="openedTime"></p>
+          </div>
+        </div>
+        <div>
+        </button>
+
+        <div class="accordion-content">
+          <p id="openedMessage">
+          </p>
+
+        </div>
+
+
+        <button class="btn">
+          <div class="firstTwo">
+            <!--grey-dot is overwritten by black-dot if dotAssigned is active (status >= 2)-->
+            <div class="black-dot" id="dotAssigned">
+              <div class="grey-dot">
+
+              </div>
+            </div>
+
+            <div class="text">
+              <p class="stage">Assigned</p>
+              <p class="time" id="assignedTime"></p>
+            </div>
+          </div>
+
+        </button>
+        <div class="accordion-content">
+          <p id="assignedMessage">
+          </p>
+        </div>
+
+
+        <button class="btn">
+          <div class="firstTwo">
+            <!-- grey-dot is overwritten by black-dot if dotInProgress is active (status >= 3)-->
+            <div class="black-dot" id="dotInProgress">
+              <div class="grey-dot">
+
+              </div>
+            </div>
+
+            <div class="text">
+              <p class="stage">In Progress</p>
+              <p class="time" id="inProgressTime"></p>
+            </div>
+          </div>
+        </button type="button">
+        <div class="accordion-content">
+          <p id="inProgressMessage">
+          </p>
+        </div>
+
+
+        <button class="btn">
+          <div class="firstTwo">
+            <!-- grey-dot is overwritten by black-dot if dotInResolved is active (status >= 4)-->
+            <div class="black-dot" id="dotResolved">
+              <div class="grey-dot">
+
+              </div>
+            </div>
+            <div class="text">
+              <p class="stage">Resolved</p>
+              <p class="time" id="resolvedTime"></p>
+            </div>
+          </div>
+        </button type="button" disabled>
+        <div class="accordion-content">
+          <p id="resolvedMessage">
+          </p>
+        </div>
+
+        <button class="btn">
+          <div class="firstTwo">
+            <!-- grey-dot is overwritten by black-dot if dotClosed is active (status == 5)-->
+            <div class="black-dot" id="dotClosed">
+              <div class="grey-dot">
+
+              </div>
+            </div>
+            <div class="text">
+              <p class="stage">Closed</p>
+              <p class="time" id="closedTime"></p>
+            </div>
+          </div>
+        </button>
+        <div class="accordion-content">
+          <p id="closedMessage">
+          </p>
+        </div>
+
+        <!-- A text area at the bottom allowing customers to add more relevant info about their ticket-->
+        <div class="more-info">
+          <hp class="more-info-title">Do you want to add more info to your
+            ticket?</p>
+          <textarea id="input-field" class="input-field"></textarea>
+          <button id="submit-button" class="submit-button">Submit</button>
+          <div id="submit-message" class="submit-message"></div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+
+</html>

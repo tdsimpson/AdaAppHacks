@@ -1,0 +1,204 @@
+/*Taylor Simpson - Ada App Hacks 2020 */
+
+/* I wasn't able to get the font working through webpack, but this is the one I would use */
+/* @font-face {
+  src: url(fonts/WoodfordBournePRO-Regular.otf);
+  font-family: woodford;
+} */
+
+* {
+  font-family: woodford;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+.widget-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+
+/* Top of the app with the title, status and description */
+
+.top-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.title {
+  margin-bottom: 2px;
+}
+
+.status {
+  padding: 5px 20px;
+  background-color: #0E74EF;
+  border-radius: 10px;
+  color: white;
+}
+
+.description {
+  font-size: 16px;
+  padding: 20px 0px 10px 0px;
+}
+
+/* Elements on the drop down buttons themself */
+
+
+.text {
+  padding: 10px 0px;
+}
+
+.stage {
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 3px;
+}
+
+.time {
+  font-size: 10px;
+  margin: 0;
+}
+
+.firstTwo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Status dots */
+
+.black-dot {
+  background-color: #111820;
+  border: none;
+  border-radius: 50%;
+  margin-right: 20px;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+
+.grey-dot {
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  margin-right: 20px;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+
+/* Collapsable button */
+
+.btn {
+  width: 100%;
+  background-color: #F3F3F5;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-align: left;
+  padding: 0px 20px;
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  margin: 2px 0px 2px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn:after {
+  content: '\f0d7';
+  font-family: "fontawesome";
+  font-size: 24px;
+}
+
+.btn.is-open:after {
+  content: '\f0d8';
+}
+
+.btn:hover,
+.btn.is-open {
+  background-color: #ddd;
+}
+
+/* =============================================================== */
+
+/* Textthat appears in the dropdown */
+
+.accordion-content {
+  background-color: white;
+  border-left: 2px solid whitesmoke;
+  border-right: 2px solid whitesmoke;
+  color: #666;
+  font-size: 14px;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  margin-left: 40px;
+}
+
+/* Padding for each dropdown's text */
+
+#openedMessage {
+  margin: 10px 0px;
+}
+
+#assignedMessage {
+  margin: 10px 0px;
+}
+
+#inProgressMessage {
+  margin: 10px 0px;
+}
+
+#resolvedMessage {
+  margin: 10px 0px;
+}
+
+#closedMessage {
+  margin: 10px 0px;
+}
+
+/* The text area at the bottom allowing you to add additional info*/
+
+
+.more-info {
+  margin-top: 20px;
+}
+
+.input-field {
+  background-color: #F3F3F5;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 10px;
+  width: 100%;
+  height: 75px;
+  font-size: 16px;
+}
+
+.submit-button {
+  border: 1.25px solid black;
+  background-color: white;
+  border-radius: 8px;
+  color: black;
+  padding: 6px 20px;
+  outline: none;
+  margin: 10px 0px;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+}
+
+.submit-button:hover {
+  background-color: black;
+  color: white;
+}
