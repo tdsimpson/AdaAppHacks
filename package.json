@@ -1,7 +1,7 @@
 {
   "name": "template-widget",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Ada App for customers to see the status of their support tickets",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --watch",
