@@ -1,6 +1,6 @@
 # Support Ticket Status
 
-An Ada App for customers to see the current status of their support tickets.
+An Ada App for customers to see the current status of their support tickets and update them if they have additional information.
 
 ## Usage
 
