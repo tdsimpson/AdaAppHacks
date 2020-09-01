@@ -9,6 +9,10 @@ Here are 3 sample ticket numbers you can use when you are prompted for one in th
 * 555666
 * 777888
 
+## Track your ticket status
+
+<img src="imgs/appScreenshot.png">
+
 ## Configuration
 
 This is how the App is configured in the bot backend:
